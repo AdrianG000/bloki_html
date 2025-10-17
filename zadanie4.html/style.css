@@ -1,0 +1,30 @@
+/* Lewa kolumna - pływa w lewo i zajmuje 48% szerokości */
+.lewy {
+	float: left;
+	width: 48%;
+	box-sizing: border-box; /* uwzględnia padding w szerokości */
+    background-color: aquamarine;
+}
+
+/* Prawa kolumna - pływa w prawo i zajmuje 48% szerokości */
+.prawy {
+	float: right;
+	width: 48%;
+	box-sizing: border-box;
+    background-color: chartreuse;
+}
+
+/* Clearfix - stosujemy na rodzicu, aby zresetować floaty i zachować poprawny przepływ */
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Drobny reset wyglądu */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 20px;
+}
+

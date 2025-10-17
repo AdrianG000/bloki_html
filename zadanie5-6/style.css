@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.main {
+    float: left;
+    width: 65%;
+    background-color: lightgray;
+    min-height: 300px;
+    margin-bottom: 10px;
+}
+.aside {
+    float: right;
+    width: 32%;
+    background-color: rgb(178, 190, 194);
+    min-height: 300px;
+    margin-bottom: 10px;
+}
+.footer {
+clear: both;
+background-color: darkmagenta;
+color: #ffffff;
+padding: 12px;
+text-align: center;
+    margin-bottom: 10px;
+}

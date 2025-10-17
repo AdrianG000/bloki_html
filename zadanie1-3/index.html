@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosta Strona</title>
+    <style>
+        /* Reset i ogólne */
+        /* box-sizing: border-box ułatwia liczenie rozmiarów elementów (padding i border wliczane w szerokość) */
+        * { box-sizing: border-box; }
+
+        /* Styl dla całej strony */
+        body {
+            /* czcionka monospace, można zmienić na inną jeśli chcesz */
+            font-family: 'Courier New', Courier, monospace;
+            /* tło całej strony (poza białym kontenerem) */
+            background-color: #e0f7fa;
+            /* usuwamy domyślne marginesy przeglądarki */
+            margin: 0;
+            /* domyślny kolor tekstu */
+            color: #111;
+        }
+
+        /* Usuwamy centralny 'white box' - chcemy, żeby sekcje zajmowały cały ekran */
+
+        /* Nagłówek strony (zwykle zawiera tytuł/branding) */
+        /* HEADER: stała wysokość, pełna szerokość */
+        header {
+            background: #0050b8; /* niebieskie tło */
+            color: #ffffff; /* biały tekst, dla kontrastu */
+            padding: 20px 25px; /* odstęp wewnątrz nagłówka */
+            width: 100%;
+        }
+
+        /* Nawigacja (menu) - zwykle lista linków do sekcji strony */
+        /* NAV: pełna szerokość, z paddingiem */
+        nav {
+            background: #808080; /* szare tło */
+            padding: 15px; /* zapewnia oddech wokół linków */
+            width: 100%;
+        }
+
+        /* Główna zawartość strony */
+        /* MAIN: ma zajmować pozostałą przestrzeń ekranu (flex: 1) */
+        main {
+            background: #ffee00; /* żółte tło */
+            padding: 20px; /* przestrzeń wewnątrz treści */
+            font-size: 18px; /* większa czcionka dla lepszej czytelności */
+            flex: 1 1 auto; /* pozwala rozciągać się w kontenerze flex */
+            min-height: 0; /* zapobiega przewinięciu przy flexboxie */
+        }
+
+        /* Stopka strony - często zawiera prawa autorskie lub dodatkowe linki */
+        /* FOOTER: stała wysokość, pełna szerokość */
+        footer {
+            background: #ff1d1d; /* czerwone tło */
+            color: #ffffff; /* biały tekst */
+            padding: 12px 20px; /* odstęp w stopce */
+            text-align: center; /* wyśrodkowanie tekstu */
+            width: 100%;
+        }
+
+        /* Prosty układ nawigacji - usuwa punktor listy i ustawia linki obok siebie */
+        .nav-list {
+            list-style: none; /* usuwa punkty listy */
+            margin: 0; /* reset marginesów */
+            padding: 0; /* reset paddingu */
+            display: flex; /* ustawia elementy w rzędzie */
+            gap: 12px; /* odstęp między linkami */
+        }
+
+        /* Styl linków w nawigacji */
+        .nav-list a {
+            color: #000; /* czarny kolor linku */
+            text-decoration: none; /* usuwa podkreślenie */
+            padding: 6px 10px; /* daje efekt 'przycisku' */
+            border-radius: 6px; /* lekko zaokrąglone rogi dla estetyki */
+        }
+
+        /* Efekt hover - kiedy najedziesz kursorem na link */
+        .nav-list a:hover {
+            background: rgba(0,0,0,0.06); /* lekki szary obszar za linkiem */
+        }
+    </style>
+</head>
+<body>
+    <!-- Używamy flexbox na body, tak aby header/nav/main/footer były rozmieszczone wertykalnie i wypełniały ekran -->
+    <div style="display:flex;flex-direction:column;min-height:100vh;">
+        <!-- HEADER: część stron zawierająca tytuł lub logo -->
+        <header>
+            <!-- h1 to główny nagłówek strony; jest ważny dla SEO i struktury dokumentu -->
+            <h1>Nagłówek strony</h1>
+        </header>
+
+        <!-- NAV: nawigacja, zwykle lista linków do sekcji lub podstron -->
+        <nav>
+            <!-- ul -> lista nieuporządkowana z linkami; klasy ułatwiają stylowanie w CSS -->
+            <ul class="nav-list">
+                <li><a href="#">Strona główna</a></li>
+                <li><a href="#">O nas</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <!-- MAIN: główna zawartość strony; semantyczny element HTML5 -->
+        <main>
+            <!-- h2 to podrozdział; powinien iść po h1 -->
+            <h2>Treść główna</h2>
+            <!-- paragraf z przykładową treścią -->
+            <p>To jest przykładowa sekcja główna ze stylem żółtego tła i większą czcionką (18px).</p>
+        </main>
+
+        <!-- FOOTER: stopka, zwykle zawiera informacje pomocnicze, prawa autorskie itp. -->
+        <footer>
+            <p>Stopka — &copy; 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
